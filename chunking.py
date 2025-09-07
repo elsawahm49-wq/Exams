@@ -15,3 +15,5 @@ def split_into_chunks(text: str, max_chars: int = 900) -> List[str]:
             buf.append(line)
             size += len(line) + 1
     if buf:
+        parts.append("\n".join(buf))
+    return parts
